@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply text-[#f8f9fa] bg-[#001219];
+}
+/* Popup стили */
+.leaflet-popup-content-wrapper {
+  background-color: #001219;
+  color: #f8f9fa;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.leaflet-popup-tip {
+  background-color: #001219;
+}
+
+.menu-open #map {
+    display: none; /* Скрываем карту, когда меню открыто */
+  }

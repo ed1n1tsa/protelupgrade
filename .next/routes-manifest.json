@@ -1,0 +1,283 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/chat",
+      "regex": "^/admin/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/chat(?:/)?$"
+    },
+    {
+      "page": "/admin/orders",
+      "regex": "^/admin/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/orders(?:/)?$"
+    },
+    {
+      "page": "/admin/products",
+      "regex": "^/admin/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/products(?:/)?$"
+    },
+    {
+      "page": "/admin/upload",
+      "regex": "^/admin/upload(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/upload(?:/)?$"
+    },
+    {
+      "page": "/admin/users",
+      "regex": "^/admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/card",
+      "regex": "^/card(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/card(?:/)?$"
+    },
+    {
+      "page": "/client/cart",
+      "regex": "^/client/cart(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/cart(?:/)?$"
+    },
+    {
+      "page": "/client/catalog",
+      "regex": "^/client/catalog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/catalog(?:/)?$"
+    },
+    {
+      "page": "/client/checkout",
+      "regex": "^/client/checkout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/checkout(?:/)?$"
+    },
+    {
+      "page": "/client/orders",
+      "regex": "^/client/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/orders(?:/)?$"
+    },
+    {
+      "page": "/client/profile",
+      "regex": "^/client/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/profile(?:/)?$"
+    },
+    {
+      "page": "/client/support",
+      "regex": "^/client/support(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/client/support(?:/)?$"
+    },
+    {
+      "page": "/kz",
+      "regex": "^/kz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz(?:/)?$"
+    },
+    {
+      "page": "/kz/admin",
+      "regex": "^/kz/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin(?:/)?$"
+    },
+    {
+      "page": "/kz/admin/chat",
+      "regex": "^/kz/admin/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin/chat(?:/)?$"
+    },
+    {
+      "page": "/kz/admin/orders",
+      "regex": "^/kz/admin/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin/orders(?:/)?$"
+    },
+    {
+      "page": "/kz/admin/products",
+      "regex": "^/kz/admin/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin/products(?:/)?$"
+    },
+    {
+      "page": "/kz/admin/upload",
+      "regex": "^/kz/admin/upload(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin/upload(?:/)?$"
+    },
+    {
+      "page": "/kz/admin/users",
+      "regex": "^/kz/admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/admin/users(?:/)?$"
+    },
+    {
+      "page": "/kz/blog",
+      "regex": "^/kz/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/blog(?:/)?$"
+    },
+    {
+      "page": "/kz/card",
+      "regex": "^/kz/card(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/card(?:/)?$"
+    },
+    {
+      "page": "/kz/client/cart",
+      "regex": "^/kz/client/cart(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/cart(?:/)?$"
+    },
+    {
+      "page": "/kz/client/catalog",
+      "regex": "^/kz/client/catalog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/catalog(?:/)?$"
+    },
+    {
+      "page": "/kz/client/checkout",
+      "regex": "^/kz/client/checkout(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/checkout(?:/)?$"
+    },
+    {
+      "page": "/kz/client/orders",
+      "regex": "^/kz/client/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/orders(?:/)?$"
+    },
+    {
+      "page": "/kz/client/profile",
+      "regex": "^/kz/client/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/profile(?:/)?$"
+    },
+    {
+      "page": "/kz/client/support",
+      "regex": "^/kz/client/support(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/client/support(?:/)?$"
+    },
+    {
+      "page": "/kz/loginSign/login",
+      "regex": "^/kz/loginSign/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/loginSign/login(?:/)?$"
+    },
+    {
+      "page": "/kz/loginSign/profile",
+      "regex": "^/kz/loginSign/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/loginSign/profile(?:/)?$"
+    },
+    {
+      "page": "/kz/loginSign/signup",
+      "regex": "^/kz/loginSign/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/loginSign/signup(?:/)?$"
+    },
+    {
+      "page": "/kz/map",
+      "regex": "^/kz/map(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/map(?:/)?$"
+    },
+    {
+      "page": "/kz/products",
+      "regex": "^/kz/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kz/products(?:/)?$"
+    },
+    {
+      "page": "/loginSign/login",
+      "regex": "^/loginSign/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/loginSign/login(?:/)?$"
+    },
+    {
+      "page": "/loginSign/profile",
+      "regex": "^/loginSign/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/loginSign/profile(?:/)?$"
+    },
+    {
+      "page": "/loginSign/signup",
+      "regex": "^/loginSign/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/loginSign/signup(?:/)?$"
+    },
+    {
+      "page": "/map",
+      "regex": "^/map(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/map(?:/)?$"
+    },
+    {
+      "page": "/products",
+      "regex": "^/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
