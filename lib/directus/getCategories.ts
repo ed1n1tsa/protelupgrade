@@ -1,14 +1,29 @@
-// lib/directus/getCategories.ts
-
 import { readItems } from '@directus/sdk';
-import { directus } from '../directus';
+import { client } from '../directus';
 
-export const getCategories = async () => {
+export async function getProducts() {
   try {
-    const categories = await directus.request(readItems('categories'));
-    return categories;
+    const response = await client.request(
+      readItems('products', {
+        fields: [
+          'id',
+          'name',
+          'description',
+          'price',
+          'images.directus_files_id.id',
+          'images.directus_files_id.filename_disk'
+        ],
+        populate: {
+          images: {
+            directus_files_id: true
+          }
+        }
+      })
+    );
+
+    return response;
   } catch (error) {
-    console.error('Ошибка загрузки категорий:', error);
+    console.error('❌ Ошибка при получении товаров:', error);
     return [];
   }
-};
+}
