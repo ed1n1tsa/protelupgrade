@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   @apply text-[#f8f9fa] bg-[#001219];
 }
+
+/* Стили для изображения */
+.product-image {
+  width: 100%;   /* Ширина изображения растягивается на весь доступный контейнер */
+  height: 192px; /* Фиксированная высота для изображения */
+  object-fit: cover; /* Сохраняет пропорции изображения, заполняя контейнер */
+}
+
 /* Popup стили */
 .leaflet-popup-content-wrapper {
   background-color: #001219;
@@ -20,5 +27,5 @@ body {
 }
 
 .menu-open #map {
-    display: none; /* Скрываем карту, когда меню открыто */
-  }
+  display: none; /* Скрываем карту, когда меню открыто */
+}

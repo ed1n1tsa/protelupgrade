@@ -18,7 +18,7 @@ export default function ClientHeader() {
 
   return (
     <>
-      <header className="p-4 flex justify-between items-center bg-white shadow">
+      <header className="p-4 flex justify-between items-center bg-[#001219] text-[#f8f9fa] shadow">
         {/* Левая часть — логотип и бургер */}
         <div className="flex items-center gap-4">
           <button onClick={() => setMenuOpen(true)} className="lg:hidden">
@@ -29,10 +29,10 @@ export default function ClientHeader() {
 
         {/* Десктоп-меню */}
         <nav className="space-x-4 text-sm hidden lg:flex">
-          <Link href="/client/catalog">Каталог</Link>
-          <Link href="/client/orders">Мои заказы</Link>
+          <Link href="/client/catalog" className="hover:text-[#e63946]">Каталог</Link>
+          <Link href="/client/orders" className="hover:text-[#e63946]">Мои заказы</Link>
           <Link href="/client/cart">
-            <span className="relative inline-block">
+            <span className="relative inline-block hover:text-[#e63946]">
               Корзина
               {count > 0 && (
                 <span className="absolute -top-2 -right-4 bg-green-500 text-white text-xs px-2 rounded-full">
@@ -41,9 +41,9 @@ export default function ClientHeader() {
               )}
             </span>
           </Link>
-          <Link href="/client/support">Поддержка</Link>
-          <Link href="/client/profile">Профиль</Link>
-          <Link href="/loginSign/login" className="text-red-500">Выйти</Link>
+          <Link href="/client/support" className="hover:text-[#e63946]">Поддержка</Link>
+          <Link href="/client/profile" className="hover:text-[#e63946]">Профиль</Link>
+          <Link href="/loginSign/login" className="text-red-500 hover:text-[#e63946]">Выйти</Link>
         </nav>
       </header>
 

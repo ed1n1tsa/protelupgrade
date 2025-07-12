@@ -27,17 +27,17 @@ export default function ProfilePage() {
   }
 
   if (!user) {
-    return <div className="p-6 text-center text-gray-500">Пожалуйста, войдите в аккаунт</div>
+    return <div className="p-6 text-center text-[#f8f9fa]">Пожалуйста, войдите в аккаунт</div>
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 bg-[#001219] text-[#f8f9fa]">
       <h1 className="text-2xl font-bold mb-4">Профиль</h1>
       <p className="mb-2"><span className="font-semibold">Email:</span> {user.email}</p>
       <p className="mb-4"><span className="font-semibold">Всего заказов:</span> {orderCount}</p>
       <button
         onClick={handleLogout}
-        className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+        className="bg-[#e63946] text-[#f8f9fa] px-4 py-2 rounded hover:bg-[#e63946]/80 transition"
       >
         Выйти
       </button>

@@ -1,22 +1,29 @@
-const URL = 'https://directus-protel.onrender.com/items/products?fields=id,name,price,description,in_stock,category_id.id,category_id.name,images.directus_files_id.id,images.directus_files_id.filename_disk';
-const TOKEN = 'd8xOZE2kJxKWgaSD5uDRxc_nTQgiKqgk';
+import { readItems } from '@directus/sdk';
+import { client } from '../directus';
 
-export const getProducts = async () => {
+export async function getProducts() {
   try {
-    const response = await fetch(URL, {
-      headers: {
-        Authorization: `Bearer ${TOKEN}`,
-      },
-    });
+    const response = await client.request(
+      readItems('products', {
+        fields: [
+          'id',
+          'name',
+          'description',
+          'price',
+          'images.directus_files_id.id',
+          'images.directus_files_id.filename_disk'
+        ],
+        populate: {
+          images: {
+            directus_files_id: true
+          }
+        }
+      })
+    );
 
-    if (!response.ok) {
-      throw new Error(`Ошибка HTTP: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.data;
+    return response;
   } catch (error) {
-    console.error('Ошибка загрузки товаров:', error);
+    console.error('❌ Ошибка при получении товаров:', error);
     return [];
   }
-};
+}

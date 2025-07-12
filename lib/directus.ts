@@ -1,5 +1,6 @@
-// lib/directus.ts
+import { createDirectus, rest, DirectusClient } from '@directus/sdk';
 
-import { createDirectus, rest } from '@directus/sdk';
+// если у тебя нет кастомной схемы:
+type Schema = any;
 
-export const directus = createDirectus('https://directus-protel.onrender.com').with(rest());
+export const client: DirectusClient<Schema> = createDirectus<Schema>('https://directus-protel.onrender.com').with(rest());

@@ -11,15 +11,19 @@ export default function ProductCard({ product }: { product: any }) {
     router.push('/client/cart')
   }
 
+  const imageUrl = product.images?.[0]?.directus_files_id?.filename_disk
+    ? `https://directus-protel.onrender.com/assets/${product.images[0].directus_files_id.filename_disk}`
+    : 'https://avatars.mds.yandex.net/i?id=4bd78bee88cd51fb26b06257b8741c9955b690e7-5887345-images-thumbs&n=13'
+
   return (
     <div className="border border-[#e63946] bg-[#001219] text-[#f8f9fa] p-4 rounded">
       <img
-        src={product.img || 'https://avatars.mds.yandex.net/get-yabs_performance/10256469/hat4203a5ade400c144c2a8a10ba165f94c/hugeX'}
+        src={imageUrl}
         alt={product.model}
         className="mb-2 h-40 object-contain w-full rounded"
       />
-      <h3 className="font-semibold text-base">{product.model}</h3>
-      <p className="text-sm">Остаток: {product.stock_count}</p>
+      <h3 className="font-semibold text-base">{product.name}</h3>
+      <p className="text-sm">Цена: {product.stock_count}</p>
       <p className="text-lg font-bold text-[#e63946]">{product.price.toLocaleString()} тг</p>
       <button
         onClick={handleBuy}

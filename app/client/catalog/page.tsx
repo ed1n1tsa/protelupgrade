@@ -32,7 +32,7 @@ export default function CatalogPage() {
         console.error('Ошибка загрузки товаров:', error)
       } else {
         setProducts(data)
-        setFiltered(data)
+        setFiltered(data) // Загружаем сразу все товары в filtered
         const uniqueBrands = Array.from(new Set(data.map((p: any) => p.brand)))
         setBrands(uniqueBrands)
       }
@@ -43,7 +43,7 @@ export default function CatalogPage() {
 
   useEffect(() => {
     filterProducts() // Вызовем фильтрацию при изменении фильтров
-  }, [selectedBrands, minPrice, maxPrice, products])
+  }, [selectedBrands, minPrice, maxPrice]) // Убираем products из зависимостей
 
   const handleBrandChange = (brand: string) => {
     setSelectedBrands((prev) =>
@@ -62,16 +62,16 @@ export default function CatalogPage() {
   }
 
   return (
-    <main className="p-6">
+    <main className="p-6 bg-[#001219] text-[#f8f9fa]">
       <h1 className="text-2xl font-bold mb-4">Каталог товаров</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
         {/* Фильтры */}
-        <div className="bg-white border p-4 rounded-md">
-          <h2 className="font-semibold mb-2">Бренды</h2>
+        <div className="bg-[#001219] border p-4 rounded-md">
+          <h2 className="font-semibold mb-2 text-[#f8f9fa]">Бренды</h2>
           {brands.length > 0 ? (
             brands.map((brand) => (
-              <label key={brand} className="block mb-1">
+              <label key={brand} className="block mb-1 text-[#f8f9fa]">
                 <input
                   type="checkbox"
                   className="mr-2"
@@ -82,23 +82,23 @@ export default function CatalogPage() {
               </label>
             ))
           ) : (
-            <p>Загрузка брендов...</p>
+            <p className="text-gray-500">Загрузка брендов...</p>
           )}
 
-          <h2 className="font-semibold mt-4 mb-2">Цена (₸)</h2>
+          <h2 className="font-semibold mt-4 mb-2 text-[#f8f9fa]">Цена (₸)</h2>
           <div className="flex flex-col gap-2">
             <input
               type="number"
               value={minPrice}
               onChange={handleMinPriceChange}
-              className="border p-1 rounded w-full"
+              className="border p-1 rounded w-full bg-[#001219] text-[#f8f9fa] placeholder-[#f8f9fa]"
               placeholder="Мин"
             />
             <input
               type="number"
               value={maxPrice}
               onChange={handleMaxPriceChange}
-              className="border p-1 rounded w-full"
+              className="border p-1 rounded w-full bg-[#001219] text-[#f8f9fa] placeholder-[#f8f9fa]"
               placeholder="Макс"
             />
           </div>
@@ -111,7 +111,7 @@ export default function CatalogPage() {
               <ProductCard key={product.sku} product={product} />
             ))
           ) : (
-            <p className="text-gray-500 col-span-full">Нет товаров</p>
+            <p className="text-[#f8f9fa] col-span-full">Нет товаров</p>
           )}
         </div>
       </div>

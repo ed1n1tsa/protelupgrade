@@ -29,21 +29,27 @@ export default function OrdersPage() {
   }, [user])
 
   if (!user) {
-    return <div className="p-6 text-center text-gray-500">Пожалуйста, войдите в аккаунт</div>
+    return <div className="p-6 text-center text-gray-400">Пожалуйста, войдите в аккаунт</div>
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 bg-black text-white">
       <h1 className="text-2xl font-bold mb-4">Мои заказы</h1>
       {orders.length === 0 ? (
-        <p className="text-gray-600">У вас пока нет заказов.</p>
+        <p className="text-gray-500">У вас пока нет заказов.</p>
       ) : (
         <div className="space-y-4">
           {orders.map((order) => (
-            <div key={order.id} className="border rounded p-4 bg-white shadow-sm">
+            <div key={order.id} className="border rounded p-4 bg-gray-800 shadow-sm">
               <p><span className="font-semibold">Заказ №:</span> {order.id}</p>
               <p><span className="font-semibold">Сумма:</span> {Number(order.total_amount).toLocaleString()} тг</p>
-              <p><span className="font-semibold">Статус:</span> {order.status}</p>
+              <p><span className="font-semibold">Статус:</span> 
+                <span className={`${
+                  order.status === 'в обработке' ? 'text-yellow-500' :
+                  order.status === 'отправлен' ? 'text-green-500' : 
+                  'text-red-500'
+                }`}>{order.status}</span>
+              </p>
               <p><span className="font-semibold">Дата:</span> {new Date(order.created_at).toLocaleString()}</p>
             </div>
           ))}

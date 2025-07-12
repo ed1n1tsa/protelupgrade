@@ -102,10 +102,10 @@ export default function CheckoutPage() {
     }
   }
 
-  if (loading) return <p className="p-6">Загрузка корзины...</p>
+  if (loading) return <p className="p-6 text-white">Загрузка корзины...</p>
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div className="max-w-2xl mx-auto p-4 bg-black text-white">
       <h1 className="text-2xl font-semibold mb-4">Оформление заказа</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -115,7 +115,7 @@ export default function CheckoutPage() {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full border px-4 py-2 rounded"
+          className="w-full border px-4 py-2 rounded bg-gray-800 text-white"
         />
         <input
           type="tel"
@@ -124,7 +124,7 @@ export default function CheckoutPage() {
           value={form.phone}
           onChange={handleChange}
           required
-          className="w-full border px-4 py-2 rounded"
+          className="w-full border px-4 py-2 rounded bg-gray-800 text-white"
         />
         <input
           type="text"
@@ -133,7 +133,7 @@ export default function CheckoutPage() {
           value={form.address}
           onChange={handleChange}
           required
-          className="w-full border px-4 py-2 rounded"
+          className="w-full border px-4 py-2 rounded bg-gray-800 text-white"
         />
         <div className="flex gap-4">
           <div className="flex flex-col w-1/2">
@@ -142,7 +142,7 @@ export default function CheckoutPage() {
               name="delivery"
               value={form.delivery}
               onChange={handleChange}
-              className="border px-2 py-1 rounded"
+              className="border px-2 py-1 rounded bg-gray-800 text-white"
             >
               <option value="courier">Курьер</option>
               <option value="pickup">Самовывоз</option>
@@ -154,7 +154,7 @@ export default function CheckoutPage() {
               name="payment"
               value={form.payment}
               onChange={handleChange}
-              className="border px-2 py-1 rounded"
+              className="border px-2 py-1 rounded bg-gray-800 text-white"
             >
               <option value="kaspi">Kaspi</option>
               <option value="halyk">Halyk</option>
@@ -165,9 +165,7 @@ export default function CheckoutPage() {
         <button
           type="submit"
           disabled={submitting}
-          className={`w-full text-white py-2 rounded transition ${
-            submitting ? 'bg-gray-400' : 'bg-orange-600 hover:bg-orange-700'
-          }`}
+          className={`w-full py-2 rounded transition ${submitting ? 'bg-gray-400' : 'bg-orange-600 hover:bg-orange-700'}`}
         >
           {submitting ? 'Обработка...' : 'К оплате'}
         </button>

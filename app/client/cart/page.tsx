@@ -55,24 +55,24 @@ export default function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <main className="p-10 text-center text-gray-600 flex flex-col items-center justify-center min-h-[50vh]">
+      <main className="p-10 text-center text-gray-200 flex flex-col items-center justify-center min-h-[50vh] bg-black">
         <Image src="/icons/empty-cart.png" alt="Пусто" width={150} height={150} />
-        <h2 className="text-xl font-semibold mt-4">Ваша корзина пуста</h2>
-        <p className="text-sm mt-2">Добавьте товары из каталога</p>
+        <h2 className="text-xl font-semibold mt-4 text-white">Ваша корзина пуста</h2>
+        <p className="text-sm mt-2 text-gray-300">Добавьте товары из каталога</p>
       </main>
     )
   }
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Корзина</h1>
+    <main className="p-6 bg-black text-white">
+      <h1 className="text-2xl font-bold mb-6 text-white">Корзина</h1>
 
       {/* Статус заказа */}
-      <div className="bg-white border rounded-md mb-6 p-4">
-        <p className="font-semibold mb-2">Статус заказа</p>
+      <div className="bg-red-600 border rounded-md mb-6 p-4">
+        <p className="font-semibold mb-2 text-white">Статус заказа</p>
         <div className="flex items-center space-x-4 text-sm">
           <div className="flex flex-col items-center">
-            <div className="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center">1</div>
+            <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">1</div>
             <span className="mt-1">Корзина</span>
           </div>
           <div className="h-1 w-10 bg-gray-300" />
@@ -92,10 +92,10 @@ export default function CartPage() {
         {/* Список товаров */}
         <div className="md:col-span-2 space-y-4">
           {cart.map((item, i) => (
-            <div key={i} className="border rounded p-4 flex justify-between items-center bg-white shadow-sm">
+            <div key={i} className="border rounded p-4 flex justify-between items-center bg-gray-800 shadow-sm">
               <div>
                 <p className="font-semibold">{item.model}</p>
-                <p className="text-sm text-gray-500">SKU: {item.sku}</p>
+                <p className="text-sm text-gray-400">SKU: {item.sku}</p>
                 <div className="flex items-center mt-2">
                   <span className="mr-2">Кол-во:</span>
                   <input
@@ -121,12 +121,12 @@ export default function CartPage() {
         </div>
 
         {/* Сводка */}
-        <div className="border rounded p-4 bg-gray-50 shadow-md">
+        <div className="border rounded p-4 bg-gray-900 shadow-md">
           <h2 className="font-semibold mb-2 text-lg">Итого</h2>
           <p className="text-xl font-bold mb-4">{total.toLocaleString()} тг</p>
           <button
             onClick={() => router.push('/client/checkout')}
-            className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded transition"
+            className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded transition"
           >
             Оформить заказ
           </button>
